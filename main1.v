@@ -1,23 +1,3 @@
-//module reg(input wire clk,reset,input wire in,output wire out);
-//  wire [14:0] d;
-//	dfr d0(clk,reset,in,d[0]);
-//	dfr d1(clk,reset,d[0],d[1]);
-//	dfr d2(clk,reset,d[1],d[2]);
-//	dfr d3(clk,reset,d[2],d[3]);
-//	dfr d4(clk,reset,d[3],d[4]);
-//	dfr d5(clk,reset,d[4],d[5]);
-//	dfr d6(clk,reset,d[5],d[6]);
-//	dfr d7(clk,reset,d[6],d[7]);
-//	dfr d8(clk,reset,d[7],d[8]);
-//	dfr d9(clk,reset,d[8],d[9]);
-//	dfr d10(clk,reset,d[9],d[10]);
-//	dfr d11(clk,reset,d[10],d[11]);
-//	dfr d12(clk,reset,d[11],d[12]);
-//	dfr d13(clk,reset,d[12],d[13]);
-//	dfr d14(clk,reset,d[13],d[14]);
-//	dfr d15(clk,reset,d[14],out);
-//endmodule
-
 module complimenter(input wire clk,reset,i,output wire o);
   wire t1,t2;
   or2 o0(i,t2,t1);
