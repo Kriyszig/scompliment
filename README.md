@@ -11,7 +11,7 @@ git clone https://github.com/Kriyszig/scompliment.git
 cd scompliment
 ```
 ```bash
-iverilog main.v tb.v
+iverilog main.v tb.v lib.v
 ./a.out
 gtkwave htw.vcd
 ```
