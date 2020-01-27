@@ -28,12 +28,8 @@ module addunit(input wire clk, cout, set, output wire nbit);
     halfadder hai1 (cout, carry, nbit, t);
 endmodule
 
-module connect(input wire clk, load, input wire[3:0] load_sig, output wire[3:0] out_sig);
+module serialcompliment(input wire clk, load, input wire[3:0] load_sig, output wire[3:0] out_sig);
     wire t1, t2;
     shiftreg sri0 (clk, load, t1, load_sig, t2, out_sig);
     addunit aui0 (clk, !t2, load, t1);
-endmodule
-
-module serialcompliment(input wire clk, set, input wire[3:0] load_sig, output wire[3:0] out_sig);
-    connect ci0 (clk, set, load_sig, out_sig);
 endmodule
